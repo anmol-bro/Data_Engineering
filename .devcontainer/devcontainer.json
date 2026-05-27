@@ -1,0 +1,6 @@
+{
+  "name": "Python ETL with Postgres",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "remoteUser": "vscode",
+  "postCreateCommand": "sudo apt update && sudo apt install -y postgresql postgresql-client"
+}

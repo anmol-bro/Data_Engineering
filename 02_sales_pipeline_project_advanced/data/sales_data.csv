@@ -1,0 +1,51 @@
+id,stock_quantity,warehouse_location,supplier_name,last_restock_date,discount_percent,is_active
+1,120,"Delhi","GlowCare Pvt Ltd","2026-03-20",10,true
+2,80,"Mumbai","HairWell Industries","2026-03-18",5,true
+3,60,"Bangalore","BeautyPro Supplies","2026-03-15",8,true
+4,150,"Delhi","Fragrance World","2026-03-25",12,true
+5,40,"Chennai","MenGroom Co","2026-03-10",0,true
+6,200,"Kolkata","NatureBath Ltd","2026-03-28",15,true
+7,75,"Delhi","NailArt Corp","2026-03-12",5,true
+8,90,"Mumbai","HairWell Industries","2026-03-19",7,true
+9,30,"Bangalore","MenGroom Co","2026-03-08",0,false
+10,110,"Delhi","HealthPlus Labs","2026-03-22",10,true
+11,50,"Noida","TechSound Ltd","2026-03-17",20,true
+12,45,"Gurgaon","MobileHub","2026-03-14",18,true
+13,25,"Mumbai","VisionElectronics","2026-03-11",25,true
+14,15,"Bangalore","GameTech Systems","2026-03-05",30,true
+15,70,"Delhi","WearableTech Inc","2026-03-21",12,true
+16,85,"Chennai","TabWorld","2026-03-09",10,true
+17,95,"Kolkata","TechSound Ltd","2026-03-23",15,true
+18,20,"Mumbai","CamPro Studios","2026-03-07",22,true
+19,150,"Delhi","StorageTech","2026-03-26",5,true
+20,55,"Noida","CamPro Studios","2026-03-16",18,true
+21,130,"Jaipur","FashionHub","2026-03-20",10,true
+22,95,"Delhi","StyleWear Ltd","2026-03-18",12,true
+23,140,"Mumbai","FootStyle","2026-03-22",8,true
+24,60,"Bangalore","LeatherWorks","2026-03-13",15,true
+25,100,"Delhi","SunWear","2026-03-19",5,true
+26,75,"Chennai","FashionHub","2026-03-17",10,true
+27,50,"Mumbai","FootStyle","2026-03-12",20,true
+28,180,"Delhi","StyleWear Ltd","2026-03-24",7,true
+29,65,"Bangalore","LuxuryBags Co","2026-03-14",18,true
+30,120,"Jaipur","FootStyle","2026-03-21",5,true
+31,20,"Delhi","HomeComfort","2026-03-06",25,true
+32,18,"Mumbai","KitchenPro","2026-03-08",20,true
+33,75,"Bangalore","CleanHome Ltd","2026-03-15",12,true
+34,40,"Delhi","CookMaster","2026-03-11",15,true
+35,30,"Chennai","DiningElegance","2026-03-10",18,true
+36,22,"Mumbai","SleepWell","2026-03-07",20,true
+37,90,"Delhi","LightDecor","2026-03-19",10,true
+38,55,"Jaipur","HomeStyle","2026-03-16",12,true
+39,160,"Kolkata","StoragePlus","2026-03-25",5,true
+40,110,"Delhi","EcoClean","2026-03-23",15,true
+41,10,"Noida","FitLife","2026-03-05",30,true
+42,35,"Delhi","StrongFit","2026-03-09",20,true
+43,60,"Mumbai","NutriHealth","2026-03-18",18,true
+44,45,"Bangalore","MediCare Devices","2026-03-14",12,true
+45,100,"Delhi","SafeLife","2026-03-20",10,true
+46,200,"Chennai","HygienePlus","2026-03-28",5,true
+47,85,"Mumbai","FitGear","2026-03-17",15,true
+48,70,"Delhi","MediCare Devices","2026-03-22",12,true
+49,150,"Bangalore","YogaEssentials","2026-03-26",10,true
+50,65,"Jaipur","FitGear","2026-03-15",8,true
