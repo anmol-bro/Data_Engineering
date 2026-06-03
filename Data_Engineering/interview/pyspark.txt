@@ -1,0 +1,87 @@
+1. What is the difference between RDD, DataFrame, and Dataset in Spark? When would you use each?
+Ans - 
+RDD → Low-level, no optimization, used for unstructured data.
+DataFrame → Optimized, fast, SQL support, most commonly used.
+Dataset → Type-safe version of DataFrame, mainly for Scala/Java.
+
+2. Explain lazy evaluation in Spark. Why is it important and how does it affect performance?
+
+Ans - 
+Lazy evaluation in Spark means transformations are not executed immediately.
+Spark first creates a logical execution plan and executes it only when an action is triggered.
+This helps Spark optimize the query, reduce unnecessary computation, improve performance, and support fault tolerance.
+
+3. What are transformations vs actions in PySpark? Give examples of each.
+
+Ans -  
+
+Transformations are lazy operations that define data processing logic and return a new DataFrame/RDD without executing immediately.
+ Actions trigger the execution of those transformations and produce the final output.
+ Examples of transformations are filter() and groupBy(), while examples of actions are show(), count(), and collect().
+ 
+4. What is a DAG (Directed Acyclic Graph) in Spark and how does the Catalyst optimizer use it?
+
+Ans - 
+
+A DAG (Directed Acyclic Graph) in Spark is the logical execution flow of a Spark job. Spark does not execute transformations immediately; instead,
+it creates a DAG where nodes represent transformations and edges represent dependencies. Since it is acyclic, there are no loops in execution.
+When an action is triggered, Spark converts the DAG into jobs, stages, and tasks for parallel execution.
+The Catalyst Optimizer is Spark SQL’s optimization engine. It optimizes the DAG by applying techniques like predicate pushdown,
+column pruning, and join optimization to improve performance and reduce data processing.
+
+5. Explain the difference between narrow and wide transformations. Why does this matter for shuffles?
+
+Ans - 
+
+Narrow transformations are transformations where each partition of the output depends on only one partition of the input,
+ such as map() and filter(). They do not require data movement across nodes, so execution is faster.
+ 
+Wide transformations are transformations where output partitions depend on multiple input partitions,
+ such as groupBy() and join(). These require data to be shuffled across the cluster.
+
+This matters because shuffles are expensive operations involving disk I/O, network transfer, and serialization. 
+Wide transformations create shuffle stages, which can significantly impact Spark job performance.
+
+
+6. what causes data skewness , how to handle ?
+
+Ans - 
+
+Data skew occurs when some partitions contain disproportionately more data than others, 
+usually because of highly frequent keys during joins or aggregations. It causes straggler tasks, executor memory issues, and poor parallelism.
+
+I usually detect skew using Spark UI and key-frequency analysis. To handle it, I use techniques like salting skewed keys, 
+repartitioning data properly, broadcast joins for small tables, and Adaptive Query Execution (AQE) in Spark 3+. 
+In severe cases, I isolate heavy keys and process them separately.
+
+7. what's repartition() and colesce()?
+
+Ans - 
+repartition() performs a full shuffle and evenly redistributes data across partitions.
+ It can both increase and decrease partitions and is useful before joins, aggregations, or when fixing skew.
+
+coalesce() minimizes shuffle and is mainly used to reduce partitions efficiently, 
+especially before writing output files. It is cheaper than repartition but may produce uneven partition sizes.
+
+8. Cache() vs persist().
+
+Ans -- 
+
+cache() and persist() both store intermediate Spark datasets to avoid recomputation.
+
+ cache() is a simpler API that uses the default storage level, typically MEMORY_AND_DISK for DataFrames.
+
+persist() is more flexible because it allows specifying storage levels such as MEMORY_ONLY,
+ MEMORY_AND_DISK, DISK_ONLY, and serialized variants.
+ 
+ I use cache() for common reuse scenarios and persist() when memory optimization or disk spill control is needed.
+ 
+ 9. Broadcast join ?
+ 
+ Ans - 
+ 
+ A broadcast join is a Spark optimization where a small table is sent to all executors to avoid shuffling large datasets during joins.
+ It is best used when one table is small enough to fit in executor memory, such as dimension or lookup tables.
+
+Spark automatically broadcasts tables smaller than the default threshold of 10 MB (spark.sql.autoBroadcastJoinThreshold). 
+We can also force broadcasting using the broadcast() function.

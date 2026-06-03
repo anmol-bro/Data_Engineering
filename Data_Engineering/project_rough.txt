@@ -1,0 +1,12 @@
+“Next Version” of Your Project
+
+You can evolve your current project into:
+
+Sales Analytics Pipeline v2
+
+Extract: CSV + API
+Transform: Python + dbt
+Load: PostgreSQL
+Orchestrate: Airflow
+Visualize: Power BI
+Deploy: Docker

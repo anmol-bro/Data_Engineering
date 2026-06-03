@@ -1,0 +1,9 @@
+Project explanation 
+Slowly changing dimension
+Dataware house vs Datalake vs Datamart
+Lazy Evaluation
+Row number , dense rank, rank
+where and having
+S3
+
+

@@ -1,0 +1,56 @@
+Database Federation: Decentralized and ACL-Compliant Hive™ Databases uber .......can you explain this blog in short and simple?
+
+Here’s a simple, no-jargon explanation of that blog:
+
+🧠 What is “Database Federation” (in this blog)?
+
+Think of it like this:
+
+Instead of putting all data in one big central database, you keep multiple smaller databases in different places, but make them work together as if they were one.
+
+👉 That’s called federation — “many databases acting like one.”
+
+🐝 What are “Hive™ Databases” here?
+
+“Hive” is just the idea that:
+
+Data is distributed across many nodes (like a beehive)
+Each node has its own data
+But they can still communicate and share when needed
+🔐 What does “ACL-Compliant” mean?
+
+ACL = Access Control List
+
+It simply means:
+
+Not everyone can see everything
+Each user/service has specific permissions
+Data access is controlled and secure
+🚀 What Uber is trying to solve
+
+At a company like Uber:
+
+Data is massive and spread across teams
+Different teams need different access levels
+Centralizing everything = slow, risky, hard to manage
+
+So they:
+
+Keep data decentralized
+But allow controlled sharing across systems
+⚙️ How it works (simplified)
+Data stays in separate databases
+A federation layer connects them
+When someone queries data:
+The system fetches from multiple sources
+Combines results
+Applies access rules (ACL)
+User sees a single unified result
+🎯 Why this approach is useful
+✅ Better scalability (handles huge data)
+✅ Strong security & access control
+✅ Teams stay independent
+✅ No need to move all data into one place
+🧾 One-line summary
+
+👉 Uber built a system where many distributed databases act like one, while still keeping strict access control and independence.

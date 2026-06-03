@@ -1,0 +1,15 @@
+Distinct ?
+Joins?
+Lead?
+Lag?
+Listagg?
+union vs union all?
+exists ?
+
+Decorators in Python ?
+Generators ?
+Data Types in Python ? set, tuple 
+Reverse a string.
+
+How can we read data from a pdf in pyspark ?
+

@@ -1,0 +1,15 @@
+These are the topics/questions you asked in this conversation:
+------***** SQL / Data Warehouse ******-------------
+Star Schema vs Snowflake Schema
+SQL Optimization
+Query Execution Order
+Execution Plan Internal Working
+Clustered vs Non-Clustered Index
+Partition Tuning
+Predicate Pushdown
+Query Processing for Analytical Purpose
+------------ *********** PySpark / Big Data ************* ---------------------
+PySpark Execution Architecture
+DAG Generation
+Stage Execution
+Multithreading

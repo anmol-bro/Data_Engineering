@@ -1,0 +1,40 @@
+Que - What's a Data warehouse ?
+Ans - A Data warehouse is central repository that collects and stores structured data from multiple sources for analysis purpose - OLAP.
+
+Que - Data warehouse vs Database?
+Ans -   Data warehouse :- Stores large volume data, Read heavy operations, Slower, Data redundancy - Yes, Column Storage, Optimized Parallel Peocessing, Exp - Snowflake
+        Database :- Stores small volume data, write heavy operations, Faster, Data redundancy - No, Row based Storage, Not Optimized for Parallel Peocessing, Exp - Postgres
+
+Que - Rules of Datawarehousing ?
+Ans- 
+ 1.subject oriented - Business focused
+ 2. integrated - from multiple data sources to single source of truth
+ 3.time variant - Stores historical data — not just current
+ 4. non volatile - data warehouse is append-only — data is only added, never updated or deleted, so full history is always preserved.
+ 
+Que - Advantages of Datawarehouses?
+Ans - 
+
+Better Decision Making
+Historical Data Analysis
+ Single Source of Truth
+ Fast Query Performance
+
+Que  - What is factless fact table?
+Ans - A factless fact table is a fact table that has no numeric measure columns —
+ it only contains foreign keys to dimension tables.
+ 
+Example 1: Event Tracking
+Suppose a university wants to track student attendance.
+Attendance Factless Fact Table - even if it contains only 3  columns
+ Student_Key
+Course_Key
+Date_Key.
+It will answer the student attendance related questions.
+
+
+Que - Date Dimension Table ?
+
+Ans - A date dimension is a pre-built lookup table with one row per day, 
+It contains calendar attributes to enable fast and flexible time-based analysis in a data warehouse.
+Instead of using raw date columns, you join to this table to slice & filter data easily by week, month, quarter, holiday, etc.
